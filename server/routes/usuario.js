@@ -52,7 +52,7 @@ app.post('/usuario', [verificaToken, verificaAdmin_Role], function(req, res) {
 
     usuario.save((err, usuarioDB) => {
         if (err) {
-            return res.status(400).json({
+            return res.status(500).json({
                 ok: false,
                 err
             });
